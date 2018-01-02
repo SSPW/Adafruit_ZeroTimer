@@ -173,3 +173,12 @@ void Adafruit_ZeroTimer::enable(boolean en) {
     tc_disable(&tc_instance);
   }
 }
+
+uint32_t Adafruit_ZeroTimer::getCount(){
+  return tc_get_count_value(&tc_instance);
+}
+
+void Adafruit_ZeroTimer::setCount(uint32_t c){
+  tc_set_count_value(&tc_instance, c);
+}
+
